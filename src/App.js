@@ -16,7 +16,7 @@ function App() {
 
   const fetchOperationCode = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/bfhl');
+      const res = await axios.get('https://bajaj-backend-oot2.onrender.com/bfhl');
       setOperationCode(res.data.operation_code);
     } catch (err) {
       console.error('Error fetching operation code:', err);
@@ -30,7 +30,7 @@ function App() {
 
     try {
       const parsedInput = JSON.parse(input);
-      const res = await axios.post('http://localhost:5000/bfhl', parsedInput);
+      const res = await axios.post('https://bajaj-backend-oot2.onrender.com/bfhl', parsedInput);
       setResponse(res.data);
     } catch (err) {
       setError('Invalid JSON input or API error');
